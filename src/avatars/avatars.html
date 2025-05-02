@@ -1,16 +1,89 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ko-KR">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Avatars 과제</title>
-  <link rel="shortcut icon" href="/src/assets/favicon/likelion.ico" type="image/x-icon" />
-  <link rel="icon" href="/src/assets/favicon/likelion.svg" />
-  <link rel="preload" as="font" href="https://cdn.jsdelivr.net/gh/sun-typeface/SUIT@2/fonts/static/woff2/SUIT-Regular.woff2">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/sun-typeface/SUIT@2/fonts/static/woff2/SUIT.css">
-  <link rel="stylesheet" href="./styles/avatars.css" />
-</head>
-<body>
-  <!-- 여기에 마크업을 구성해 주세요. -->
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Avatars 과제</title>
+    <link rel="shortcut icon" href="/src/assets/favicon/likelion.ico" type="image/x-icon" />
+    <link rel="icon" href="/src/assets/favicon/likelion.svg" />
+    <link rel="preload" as="font" href="https://cdn.jsdelivr.net/gh/sun-typeface/SUIT@2/fonts/static/woff2/SUIT-Regular.woff2" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/sun-typeface/SUIT@2/fonts/static/woff2/SUIT.css" />
+    <link rel="stylesheet" href="./styles/avatars.css" />
+  </head>
+  <body>
+    <!-- 여기에 마크업을 구성해 주세요. -->
+    <div class="container">
+      <div class="image-container">
+        <div class="circle-image">
+          <img src="/src/avatars/images/face1.jpg" alt="색조화장을 짙게하고 머리를 올려묶은 동양여성" class="circle-image" />
+        </div>
+        <button class="toggle-button"></button>
+      </div>
+
+      <div class="image-container">
+        <div class="circle-image">
+          <img src="/src/avatars/images/face2.jpg" alt="눈꼬리를 올리고 색조화장을 짙게한 머리를 아래로 흘러내리듯 하나로 묶은 동양여성" class="circle-image" />
+        </div>
+        <button class="toggle-button active"></button>
+      </div>
+
+      <div class="image-container">
+        <div class="circle-image">
+          <img src="/src/avatars/images/face3.jpg" alt="내츄럴한 화장을하고 반묶음머리를 한 동양여성" class="circle-image" />
+        </div>
+        <button class="toggle-button"></button>
+      </div>
+
+      <div class="image-container">
+        <div class="circle-image">
+          <img src="/src/avatars/images/face4.jpg" alt="눈과 입을 강조한 화장을 하고 단발머리에 입을 삐쭉 내밀고 오른손으로 턱을 괸 동양여성" class="circle-image" />
+        </div>
+        <button class="toggle-button active"></button>
+      </div>
+
+      <div class="image-container">
+        <div class="circle-image">
+          <img src="/src/avatars/images/face5.jpg" alt="눈이 양쪽으로 찢어진 코끝이 둥글고 입술이 두껍고 작은 숏컷을 한 동양남성" class="circle-image" />
+        </div>
+        <button class="toggle-button active"></button>
+      </div>
+
+      <div class="image-container">
+        <div class="circle-image">
+          <img src="/src/avatars/images/face6.jpg" alt="눈꼬리가 올라간 화살표 코에 두꺼운 입술을 가진 숏컷을 한 동양남성" class="circle-image" />
+        </div>
+        <button class="toggle-button active"></button>
+      </div>
+
+      <div class="image-container">
+        <div class="circle-image">
+          <img src="/src/avatars/images/face7.jpg" alt="쌍커풀이 짙고 눈동자가 크고 오똑한 코와 큰 입을 가진 숏컷머리를 한 동양남성" class="circle-image" />
+        </div>
+        <button class="toggle-button"></button>
+      </div>
+
+      <div class="image-container">
+        <div class="circle-image">
+          <img src="/src/avatars/images/face8.jpg" alt="내츄럴한 화장을 하고 눈을 아래로 깔고있는 댄디컷을 한 동양남성" class="circle-image" />
+        </div>
+        <button class="toggle-button"></button>
+      </div>
+    </div>
+
+    <script>
+      const toggleButton = document.querySelectorAll('.toggle-button');
+
+      toggleButton.forEach((button) => {
+        button.addEventListener('click', function () {
+          this.classList.toggle('active');
+
+          if (this.classList.contains('active')) {
+            this.textContent = '초';
+          } else {
+            this.textContent = '색';
+          }
+        });
+      });
+    </script>
+  </body>
 </html>
