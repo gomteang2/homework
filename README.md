@@ -6,4 +6,5 @@
 
 - [마크다운 문법](./src/md/markdown.md)
 - [1주차 회고](./src/md/week1-retrospect.md)
+- [아바타 숙제](./src/avatars/avatars.html)
 - [2주차 회고](./src/md/week2-retrospect.md)
