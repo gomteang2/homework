@@ -8,3 +8,5 @@
 - [1주차 회고](./src/md/week1-retrospect.md)
 - [아바타 숙제](./src/avatars/avatars.html)
 - [2주차 회고](./src/md/week2-retrospect.md)
+- [3주차 회고](./src/md/week3-retrospect.md)
+- [4주차 회고](./src/md/week4-retrospect.md)
