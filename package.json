@@ -1,9 +1,11 @@
 {
   "scripts": {
     "start": "live-server . --port=8090 --host=localhost --no-browser",
-    "format": "prettier . --check"
+    "format": "prettier . --check",
+    "webpc": "webpc --path ./src/apple/products --destination ./src/apple/webp --quality 90"
   },
   "devDependencies": {
+    "image-webp-converter": "^1.2.3",
     "live-server": "^1.2.2",
     "prettier": "^3.5.3"
   }

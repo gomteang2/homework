@@ -1,0 +1,190 @@
+@import './card-component.css';
+
+/* 카드 레이아웃 */
+ul {
+  display: grid;
+  grid-template-columns: 2fr;
+  row-gap: var(--base-spacing);
+  column-gap: var(--base-spacing);
+  padding: 0;
+}
+
+li {
+  position: relative;
+  width: 100%;
+  height: var(--size);
+  display: flex;
+  justify-content: center;
+  align-content: start;
+  background-size: cover;
+  background-position: center;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.blue .container {
+  color: var(--white);
+}
+
+.black .container {
+  color: var(--black);
+}
+
+h1 {
+  padding-top: var(--large-spacing);
+  padding-bottom: var(--small-spacing);
+  font-size: var(--large-text);
+  font-weight: 700;
+}
+
+ul li .container p {
+  font-size: var(--base-text);
+  line-height: var(--line-normal);
+}
+
+ul li .container span {
+  padding-top: var(--small-spacing);
+  font-size: var(--small-text);
+  color: var(--gray);
+}
+
+.link {
+  display: flex;
+  flex-flow: row nowrap;
+  padding-top: var(--small-spacing);
+  column-gap: var(--base-spacing);
+
+  a {
+    display: inline-flex;
+    width: 5.625rem;
+    height: 2.25rem;
+    padding: var(--x-small-spacing);
+    border-radius: 1.25rem;
+    font-size: var(--xx-small-text);
+    font-weight: 700;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+.blue .more-button {
+  background-color: var(--blue-400);
+  color: var(--white);
+}
+
+.blue .price-button {
+  border: 0.0625rem solid var(--blue-400);
+  background-color: transparent;
+  color: var(--blue-400);
+}
+
+.black .more-button {
+  background-color: var(--black);
+  color: var(--white);
+}
+
+.black .price-button {
+  border: 0.0625rem solid var(--black);
+  background-color: transparent;
+  color: var(--black);
+}
+
+.ipadpro {
+  background-image: image-set(url('../webp/ipad_pro.webp') type('image/webp') 1x, url('../webp/ipad_pro_2x.webp') type('image/webp') 2x);
+}
+
+.ipadair {
+  background-image: image-set(url('../webp/ipad_air.webp') type('image/webp') 1x, url('../webp/ipad_air_2x.webp') type('image/webp') 2x);
+}
+
+.iphone15pro {
+  background-image: image-set(url('../webp/iphone15_pro.webp') type('image/webp') 1x, url('../webp/iphone15_pro_2x.webp') type('image/webp') 2x);
+}
+
+.iphone15 {
+  background-image: image-set(url('../webp/iphone15.webp') type('image/webp') 1x, url('../webp/iphone15_2x.webp') type('image/webp') 2x);
+}
+
+.watch {
+  background-image: image-set(url('../webp/apple_watch.webp') type('image/webp') 1x, url('../webp/apple_watch_2x.webp') type('image/webp') 2x);
+}
+
+.macbookair {
+  background-image: image-set(url('../webp/macbook_air.webp') type('image/webp') 1x, url('../webp/macbook_air_2x.webp') type('image/webp') 2x);
+}
+
+.airpodspro {
+  background-image: image-set(url('../webp/airpods_pro.webp') type('image/webp') 1x, url('../webp/airpods_pro_2x.webp') type('image/webp') 2x);
+}
+
+@media (min-width: 1024px) {
+  .ipadpro {
+    background-image: image-set(url('../webp/ipad_pro_wide.webp') type('image/webp') 1x, url('../webp/ipad_pro_wide_2x.webp') type('image/webp') 2x);
+  }
+
+  .ipadair {
+    background-image: image-set(url('../webp/ipad_air_wide.webp') type('image/webp') 1x, url('../webp/ipad_air_wide_2x.webp') type('image/webp') 2x);
+  }
+
+  .iphone15pro {
+    background-image: image-set(url('../webp/iphone15_pro_wide.webp') type('image/webp') 1x, url('../webp/iphone15_pro_wide_2x.webp') type('image/webp') 2x);
+  }
+
+  li {
+    display: inline-flex;
+  }
+
+  ul {
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: var(--base-spacing);
+  }
+
+  .ipadpro {
+    grid-area: 1 / 1 / 2 / 3;
+  }
+
+  .ipadair {
+    grid-area: 2 / 1 / 3 / 3;
+  }
+
+  .iphone15pro {
+    grid-area: 3 / 1 / 4 / 3;
+  }
+
+  .iphone15 {
+    grid-area: 4 / 1 / 5 / 2;
+  }
+
+  .watch {
+    grid-area: 4 / 2 / 5 / 3;
+  }
+
+  .macbookair {
+    grid-area: 5 / 1 / 6 / 2;
+  }
+  .airpodspro {
+    grid-area: 5 / 2 / 6 / 3;
+  }
+
+  h1 {
+    padding-top: var(--extra-large-spacing);
+    font-size: var(--extra-large-text);
+  }
+
+  .container p {
+    font-size: var(--medium-text);
+  }
+
+  .link a {
+    font-size: var(--x-small-text);
+  }
+
+  .grid-wrapper {
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: var(--base-spacing);
+  }
+}
